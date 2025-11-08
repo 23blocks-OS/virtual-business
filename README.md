@@ -18,24 +18,27 @@ virtual-business/
 
 ## 🚀 Quick Start
 
+> **📖 For detailed local development setup, see [DEVELOPMENT.md](DEVELOPMENT.md)** - Complete guide with requirements, installation, configuration, and troubleshooting.
+
 ### Prerequisites
 - Node.js >= 18.0.0
 - npm >= 9.0.0
-- Terraform >= 1.0 (for infrastructure)
-- AWS CLI configured (for deployment)
+- Anthropic API Key ([get one here](https://console.anthropic.com/))
+- Terraform >= 1.0 (for AWS deployment only)
+- AWS CLI configured (for AWS deployment only)
 
-### Installation
+### Local Installation
 
 ```bash
-# Install all dependencies
+# 1. Install all dependencies
 npm install
 
-# Run both frontend and backend in development mode
-npm run dev
+# 2. Configure backend environment
+cp backend/.env.example backend/.env
+# Edit backend/.env and add your ANTHROPIC_API_KEY
 
-# Or run individually
-npm run dev:frontend
-npm run dev:backend
+# 3. Run both frontend and backend in development mode
+npm run dev
 ```
 
 ### Development URLs
@@ -180,10 +183,11 @@ CORS_ORIGIN=http://localhost:5173
 
 ## 📚 Documentation
 
-- [Frontend Documentation](frontend/README.md)
-- [Backend Documentation](backend/README.md)
-- [Infrastructure Documentation](infrastructure/README.md)
-- [Contributing Guide](CONTRIBUTING.md)
+- **[Local Development Guide](DEVELOPMENT.md)** - Complete setup and troubleshooting
+- [Frontend Documentation](frontend/README.md) - 3D components and React setup
+- [Backend Documentation](backend/README.md) - API and AI agent configuration
+- [Infrastructure Documentation](infrastructure/README.md) - AWS deployment
+- [Contributing Guide](CONTRIBUTING.md) - Development workflow and standards
 
 ## 🛠️ Available Scripts
 
